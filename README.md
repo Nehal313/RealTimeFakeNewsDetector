@@ -1,13 +1,32 @@
-# 🔍 Fake News Detection & Verification System
+# 🔍 Real-Time AI Fake News Detection & Verification System
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green.svg)](https://fastapi.tiangolo.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![ML Accuracy](https://img.shields.io/badge/ML%20Accuracy-98.2%25-success.svg)](https://github.com/Nehal313/RealTimeFakeNewsDetector)
 
-> **Production-ready AI system combining ML classification, multi-source verification, RAG-powered evidence retrieval, and an intelligent AI assistant for comprehensive fake news detection.**
+> **🚀 Advanced AI-powered misinformation detection system leveraging machine learning, multi-source verification, RAG architecture, and browser integration to combat fake news in real-time.**
 
-**Author:** Mohammed Nehal
+**Author:** Mohammed Nehal  
+**Repository:** [RealTimeFakeNewsDetector](https://github.com/Nehal313/RealTimeFakeNewsDetector)
+
+---
+
+## 💡 Project Description
+
+In the digital age, misinformation spreads faster than ever before. This **production-grade AI system** provides instant, multi-layered verification of online content through:
+
+- **🎯 98.2% Accurate ML Model**: Trained on 10,000+ articles using TF-IDF + Logistic Regression
+- **🌐 Real-Time Multi-Source Verification**: Cross-references claims across 6+ trusted news outlets (Reuters, AP News, BBC, The Hindu, TOI, NDTV)
+- **🤖 RAG-Powered Evidence Retrieval**: FAISS vector similarity search with 384-dimensional embeddings for intelligent fact-checking
+- **📝 AI Summarization**: HuggingFace DistilBART transformer for abstractive summaries + TF-IDF extractive fallback
+- **🔍 Intelligent Claim Extraction**: NLP-based extraction with priority ranking and entity recognition
+- **🧩 Chrome Extension**: Real-time browser integration with color-coded verification UI
+- **⚡ Sub-2-Second Response**: Optimized FastAPI backend with async multi-source scraping
+- **🐳 Fully Containerized**: Docker-ready deployment with Redis caching support
+
+**Built for:** Journalists, researchers, fact-checkers, educators, and anyone fighting misinformation online.
 
 ---
 
