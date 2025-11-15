@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: fakenews-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - PYTHONUNBUFFERED=1
+      - VECTORDB_PATH=/app/.vectordb
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - BING_API_KEY=${BING_API_KEY:-}
+    volumes:
+      - ./backend/.vectordb:/app/.vectordb
+      - ./backend/logs:/app/logs
+      - ./model:/app/model
+    restart: unless-stopped
+    networks:
+      - fakenews-network
+
+  # Optional: Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: fakenews-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - fakenews-network
+    command: redis-server --appendonly yes
+
+networks:
+  fakenews-network:
+    driver: bridge
+
+volumes:
+  redis-data:
